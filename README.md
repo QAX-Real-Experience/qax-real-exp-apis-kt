@@ -14,11 +14,14 @@ Este proyecto usa **Karate Framework** para automatizar pruebas para la API de A
 ## 📂 Estructura del Proyecto
 
 ```
-src/test/java
-├── features/            # Archivos .feature (Escenarios de prueba)
-│   └── auth/            # Pruebas de Autenticación (Login)
-├── karate-config.js     # Configuración global y variables de entorno
-└── LoginRunner.java     # Runner para ejecución completa
+qax-real-exp-apis-kt/
+├── src/                                     # Carpeta raíz del código y tests
+├── karate-config.js                         # Configuración global del framework Karate
+├── LICENSE                                  # Licencia del repositorio
+├── pom.xml                                  # Archivo de configuración de Maven
+├── README.md                                # Documentación general del proyecto
+└── testCases Aprendiz.md                    # Detalle de los casos de prueba definidos
+└── Auth Aprendiz.postman_collection         # Colección de Postman para pruebas manuales
 ```
 
 ## 🚀 Configuración y Ejecución

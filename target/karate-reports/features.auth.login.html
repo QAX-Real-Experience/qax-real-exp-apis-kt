@@ -1,0 +1,2984 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"b4b14dd4-1ac3-4918-ae0f-7dde44194a7b",karate_version:"1.5.0",karate_meta:null});
+  }
+});
+</script>
+
+    <title>features.auth.login</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">8</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2026-04-26 08:09:30 PM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:9]"><span>[1:9]</span> <span>CP01 - Login exitoso</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.1:41]"><span>[2.1:41]</span> <span>CP02 - Login con Usuario no registrado</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.2:42]"><span>[2.2:42]</span> <span>CP03 - Login con Email formato inválido</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.3:43]"><span>[2.3:43]</span> <span>CP04 - Login con Email vacío</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.4:44]"><span>[2.4:44]</span> <span>CP05 - Login con Contraseña inválida</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.5:45]"><span>[2.5:45]</span> <span>CP06 - Login con Contraseña vacía</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[3:47]"><span>[3:47]</span> <span>CP07 - Login con campo email ausente</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[4:58]"><span>[4:58]</span> <span>CP08 - Login con campo contraseña ausente</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">features/auth/login.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Autenticación de usuario Aprendiz</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:9]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:9]</span>
+                <span class="scenario-name">CP01 - Login exitoso</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>3005</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:9]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:9]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:9]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def password = &#39;12345678&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:9]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payload = { email: &#39;aprendiz1001@qaxpert.com&#39;, password: &#39;12345678&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">45</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/auth/v1/token&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param grant_type = &#39;password&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payload</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2926</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">20:09:25.276 request:
+1 &gt; POST https://bnjqjtsxgoenzzjzzwhe.supabase.co/auth/v1/token?grant_type=password
+1 &gt; apikey: sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Authorization: Bearer sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 58
+1 &gt; Host: bnjqjtsxgoenzzjzzwhe.supabase.co
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/25)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;aprendiz1001@qaxpert.com&quot;,&quot;password&quot;:&quot;12345678&quot;}
+
+20:09:27.662 response time in milliseconds: 2364
+1 &lt; 200
+1 &lt; Date: Sun, 26 Apr 2026 23:09:27 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; CF-Ray: 9f29414d2846ee13-EZE
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; Server: cloudflare
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Vary: Origin, Accept-Encoding
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; sb-auth-refresh-token-prefix: pb7fc
+1 &lt; sb-auth-session-id: fd963d6e-22e2-46b0-a8ab-8c156531f584
+1 &lt; sb-auth-user-id: e3554e64-1780-45be-a5d8-f902fc9007bf
+1 &lt; sb-gateway-version: 1
+1 &lt; sb-project-ref: bnjqjtsxgoenzzjzzwhe
+1 &lt; sb-request-id: 019dcc0e-0c44-7601-884d-7c22aef238fe
+1 &lt; x-envoy-attempt-count: 1
+1 &lt; x-envoy-upstream-service-time: 447
+1 &lt; set-cookie: __cf_bm=Ul8ofmnL6ijlF.dlhkhqQc8_CL3hg4ZSdfW59YWHjwk-1777244965.9489696-1.0.1.1-.OBr2m60V_5GPLARwAEpkn7DHHR6Kx5REE7XiGHgRH1eM9GE5eZz8mwKAS0pVuqpMrC_Wj_3_yvez..h1zJAnu2rM5qwatMoziG_X9PL0atlquvX4b8BBr_WRpycwywZ; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:27 GMT
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+1 &lt; Set-Cookie: __cf_bm=Ul8ofmnL6ijlF.dlhkhqQc8_CL3hg4ZSdfW59YWHjwk-1777244965.9489696-1.0.1.1-.OBr2m60V_5GPLARwAEpkn7DHHR6Kx5REE7XiGHgRH1eM9GE5eZz8mwKAS0pVuqpMrC_Wj_3_yvez..h1zJAnu2rM5qwatMoziG_X9PL0atlquvX4b8BBr_WRpycwywZ; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:27 GMT
+{&quot;access_token&quot;:&quot;eyJhbGciOiJFUzI1NiIsImtpZCI6Ijc0YjYwOWU0LWFlMzMtNDgzMS1hODUyLTA4NjIxMTZmM2E2NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2JuanFqdHN4Z29lbnp6anp6d2hlLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJlMzU1NGU2NC0xNzgwLTQ1YmUtYTVkOC1mOTAyZmM5MDA3YmYiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc3MjQ4NTY3LCJpYXQiOjE3NzcyNDQ5NjcsImVtYWlsIjoiYXByZW5kaXoxMDAxQHFheHBlcnQuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJjb3VudHJ5IjoiQ29sb21iaWEiLCJlbWFpbCI6ImFwcmVuZGl6MTAwMUBxYXhwZXJ0LmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmdWxsbmFtZSI6IkFwcmVuZGl6IE5pbmphIEZvciBUZXN0aW5nIiwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiJlMzU1NGU2NC0xNzgwLTQ1YmUtYTVkOC1mOTAyZmM5MDA3YmYiLCJ3cCI6Iis1NzMwMDExMTIyMzMifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc3NzI0NDk2N31dLCJzZXNzaW9uX2lkIjoiZmQ5NjNkNmUtMjJlMi00NmIwLWE4YWItOGMxNTY1MzFmNTg0IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.YJfH3acrfpcy46F0146G80im7pCVkQuP3tR7zeVfZGFofX66N6J9Aj_7IA5fgKU30rTgGaIweyCHSDqRmi5gsg&quot;,&quot;token_type&quot;:&quot;bearer&quot;,&quot;expires_in&quot;:3600,&quot;expires_at&quot;:1777248567,&quot;refresh_token&quot;:&quot;pb7fchdatgvo&quot;,&quot;user&quot;:{&quot;id&quot;:&quot;e3554e64-1780-45be-a5d8-f902fc9007bf&quot;,&quot;aud&quot;:&quot;authenticated&quot;,&quot;role&quot;:&quot;authenticated&quot;,&quot;email&quot;:&quot;aprendiz1001@qaxpert.com&quot;,&quot;email_confirmed_at&quot;:&quot;2026-03-25T22:21:47.902825Z&quot;,&quot;phone&quot;:&quot;&quot;,&quot;confirmed_at&quot;:&quot;2026-03-25T22:21:47.902825Z&quot;,&quot;last_sign_in_at&quot;:&quot;2026-04-26T23:09:27.458330453Z&quot;,&quot;app_metadata&quot;:{&quot;provider&quot;:&quot;email&quot;,&quot;providers&quot;:[&quot;email&quot;]},&quot;user_metadata&quot;:{&quot;country&quot;:&quot;Colombia&quot;,&quot;email&quot;:&quot;aprendiz1001@qaxpert.com&quot;,&quot;email_verified&quot;:true,&quot;fullname&quot;:&quot;Aprendiz Ninja For Testing&quot;,&quot;phone_verified&quot;:false,&quot;sub&quot;:&quot;e3554e64-1780-45be-a5d8-f902fc9007bf&quot;,&quot;wp&quot;:&quot;+573001112233&quot;},&quot;identities&quot;:[{&quot;identity_id&quot;:&quot;fd67791a-c4cf-496a-a4a1-03c6d19d73ab&quot;,&quot;id&quot;:&quot;e3554e64-1780-45be-a5d8-f902fc9007bf&quot;,&quot;user_id&quot;:&quot;e3554e64-1780-45be-a5d8-f902fc9007bf&quot;,&quot;identity_data&quot;:{&quot;country&quot;:&quot;Colombia&quot;,&quot;email&quot;:&quot;aprendiz1001@qaxpert.com&quot;,&quot;email_verified&quot;:false,&quot;fullname&quot;:&quot;Aprendiz Ninja For Testing&quot;,&quot;phone_verified&quot;:false,&quot;sub&quot;:&quot;e3554e64-1780-45be-a5d8-f902fc9007bf&quot;,&quot;wp&quot;:&quot;+573001112233&quot;},&quot;provider&quot;:&quot;email&quot;,&quot;last_sign_in_at&quot;:&quot;2026-03-25T22:21:47.89152Z&quot;,&quot;created_at&quot;:&quot;2026-03-25T22:21:47.891952Z&quot;,&quot;updated_at&quot;:&quot;2026-03-25T22:21:47.891952Z&quot;,&quot;email&quot;:&quot;aprendiz1001@qaxpert.com&quot;}],&quot;created_at&quot;:&quot;2026-03-25T22:21:47.797244Z&quot;,&quot;updated_at&quot;:&quot;2026-04-26T23:09:27.527197Z&quot;,&quot;is_anonymous&quot;:false},&quot;weak_password&quot;:null}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response contains</span>
+      </div>
+    </div>
+    <div class="time-cell passed">17</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.15">{
+  &quot;access_token&quot;: &quot;#string&quot;,
+  &quot;token_type&quot;: &quot;bearer&quot;,
+  &quot;expires_in&quot;: &quot;#number&quot;,
+  &quot;refresh_token&quot;: &quot;#string&quot;,
+  &quot;user&quot;: &quot;#object&quot;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.1:41]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.1:41]</span>
+                <span class="scenario-name">CP02 - Login con Usuario no registrado</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>362</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.1:41]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.1:41]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:41]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def password = &#39;12345678&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:41]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payload = { email: &#39;aprendiz1001@qaxpert.com&#39;, password: &#39;12345678&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>set payload.email = &#39;tomilissa@test.com&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/auth/v1/token&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param grant_type = &#39;password&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payload</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">345</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.32">20:09:27.744 request:
+1 &gt; POST https://bnjqjtsxgoenzzjzzwhe.supabase.co/auth/v1/token?grant_type=password
+1 &gt; apikey: sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Authorization: Bearer sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 52
+1 &gt; Host: bnjqjtsxgoenzzjzzwhe.supabase.co
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/25)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;tomilissa@test.com&quot;,&quot;password&quot;:&quot;12345678&quot;}
+
+20:09:28.082 response time in milliseconds: 336
+1 &lt; 400
+1 &lt; Date: Sun, 26 Apr 2026 23:09:28 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 81
+1 &lt; Connection: keep-alive
+1 &lt; CF-Ray: 9f2941597a9ded09-EZE
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; Server: cloudflare
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Vary: Origin
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; sb-gateway-version: 1
+1 &lt; sb-project-ref: bnjqjtsxgoenzzjzzwhe
+1 &lt; sb-request-id: 019dcc0e-13f8-7d2d-a6ce-c4b0bef2713a
+1 &lt; x-envoy-attempt-count: 1
+1 &lt; x-envoy-upstream-service-time: 3
+1 &lt; x-sb-error-code: invalid_credentials
+1 &lt; set-cookie: __cf_bm=lz5fBvzN7tzsO8K0RSWILzB3yGh3jiGCMml.SE2KSgw-1777244967.9197397-1.0.1.1-8PsDZPvESWrVfEkUlRfathioQi.2ndpKAWh8M7ig6P4lT9Ys686Swq7paR_2aH8AsIJ08IfzpwXs_MpdM4sCfCDVH2P1qSekK0IyPJCaIb2zJTShFNc5QOIiOfQaleEu; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:28 GMT
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+1 &lt; Set-Cookie: __cf_bm=lz5fBvzN7tzsO8K0RSWILzB3yGh3jiGCMml.SE2KSgw-1777244967.9197397-1.0.1.1-8PsDZPvESWrVfEkUlRfathioQi.2ndpKAWh8M7ig6P4lT9Ys686Swq7paR_2aH8AsIJ08IfzpwXs_MpdM4sCfCDVH2P1qSekK0IyPJCaIb2zJTShFNc5QOIiOfQaleEu; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:28 GMT
+{&quot;code&quot;:400,&quot;error_code&quot;:&quot;invalid_credentials&quot;,&quot;msg&quot;:&quot;Invalid login credentials&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.error_code == &#39;invalid_credentials&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.msg == &#39;Invalid login credentials&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.2:42]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.2:42]</span>
+                <span class="scenario-name">CP03 - Login con Email formato inválido</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>378</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.2:42]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def password = &#39;12345678&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payload = { email: &#39;aprendiz1001@qaxpert.com&#39;, password: &#39;12345678&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>set payload.email = &#39;tomilissa&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/auth/v1/token&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param grant_type = &#39;password&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payload</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">364</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.32">20:09:28.146 request:
+1 &gt; POST https://bnjqjtsxgoenzzjzzwhe.supabase.co/auth/v1/token?grant_type=password
+1 &gt; apikey: sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Authorization: Bearer sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 43
+1 &gt; Host: bnjqjtsxgoenzzjzzwhe.supabase.co
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/25)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;tomilissa&quot;,&quot;password&quot;:&quot;12345678&quot;}
+
+20:09:28.500 response time in milliseconds: 350
+1 &lt; 400
+1 &lt; Date: Sun, 26 Apr 2026 23:09:28 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 81
+1 &lt; Connection: keep-alive
+1 &lt; CF-Ray: 9f29415bfdfeacf7-EZE
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; Server: cloudflare
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Vary: Origin
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; sb-gateway-version: 1
+1 &lt; sb-project-ref: bnjqjtsxgoenzzjzzwhe
+1 &lt; sb-request-id: 019dcc0e-158e-7fde-a4aa-cc0e33b713be
+1 &lt; x-envoy-attempt-count: 1
+1 &lt; x-envoy-upstream-service-time: 4
+1 &lt; x-sb-error-code: invalid_credentials
+1 &lt; set-cookie: __cf_bm=K.SpJgTUN20uPYOd5cSVg2jNehefYC3oHn9oVNdgddI-1777244968.3164608-1.0.1.1-CTOQYMezx2D2cpSJnRYp5tJXnaWkORH.Je8._P.mYh1OhP_d0kjD_CXyQ41MMHe7bg_lxw4vjXdI2uSkHXBdce8Fp0gLR_yXQiFqQ7HjCkTmW_sF6fKXeC2PG.Tv.YaG; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:28 GMT
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+1 &lt; Set-Cookie: __cf_bm=K.SpJgTUN20uPYOd5cSVg2jNehefYC3oHn9oVNdgddI-1777244968.3164608-1.0.1.1-CTOQYMezx2D2cpSJnRYp5tJXnaWkORH.Je8._P.mYh1OhP_d0kjD_CXyQ41MMHe7bg_lxw4vjXdI2uSkHXBdce8Fp0gLR_yXQiFqQ7HjCkTmW_sF6fKXeC2PG.Tv.YaG; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:28 GMT
+{&quot;code&quot;:400,&quot;error_code&quot;:&quot;invalid_credentials&quot;,&quot;msg&quot;:&quot;Invalid login credentials&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.error_code == &#39;invalid_credentials&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.msg == &#39;Invalid login credentials&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.3:43]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.3:43]</span>
+                <span class="scenario-name">CP04 - Login con Email vacío</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>658</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.3:43]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.3:43]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:43]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def password = &#39;12345678&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:43]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payload = { email: &#39;aprendiz1001@qaxpert.com&#39;, password: &#39;12345678&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>set payload.email = &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/auth/v1/token&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param grant_type = &#39;password&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payload</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">644</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.32">20:09:28.565 request:
+1 &gt; POST https://bnjqjtsxgoenzzjzzwhe.supabase.co/auth/v1/token?grant_type=password
+1 &gt; apikey: sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Authorization: Bearer sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 34
+1 &gt; Host: bnjqjtsxgoenzzjzzwhe.supabase.co
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/25)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;&quot;,&quot;password&quot;:&quot;12345678&quot;}
+
+20:09:29.204 response time in milliseconds: 637
+1 &lt; 400
+1 &lt; Date: Sun, 26 Apr 2026 23:09:29 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 76
+1 &lt; Connection: keep-alive
+1 &lt; CF-Ray: 9f29415e88075676-EZE
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; Server: cloudflare
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Vary: Origin
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; sb-gateway-version: 1
+1 &lt; sb-project-ref: bnjqjtsxgoenzzjzzwhe
+1 &lt; sb-request-id: 019dcc0e-1720-71e3-ac26-5043127cdd9e
+1 &lt; x-envoy-attempt-count: 1
+1 &lt; x-envoy-upstream-service-time: 4
+1 &lt; x-sb-error-code: validation_failed
+1 &lt; set-cookie: __cf_bm=_KMN_jz7Iz9NOZZCOj9QI_oTKLEs0tdWUUvkSrXOoOs-1777244968.7309418-1.0.1.1-5hQ22hOGHoQ85EUf4g71B.X4mEMSaG5R7YmcCk30mnqrrEC54dMi1jp.ycJk5q8CwBNSyM1V6dWArifqXd58DfmkpvGATUDhBSyRV_cTdeh7YjiAJp1Tivi5In_Wjk4R; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:29 GMT
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+1 &lt; Set-Cookie: __cf_bm=_KMN_jz7Iz9NOZZCOj9QI_oTKLEs0tdWUUvkSrXOoOs-1777244968.7309418-1.0.1.1-5hQ22hOGHoQ85EUf4g71B.X4mEMSaG5R7YmcCk30mnqrrEC54dMi1jp.ycJk5q8CwBNSyM1V6dWArifqXd58DfmkpvGATUDhBSyRV_cTdeh7YjiAJp1Tivi5In_Wjk4R; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:29 GMT
+{&quot;code&quot;:400,&quot;error_code&quot;:&quot;validation_failed&quot;,&quot;msg&quot;:&quot;missing email or phone&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.error_code == &#39;validation_failed&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.msg == &#39;missing email or phone&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.4:44]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.4:44]</span>
+                <span class="scenario-name">CP05 - Login con Contraseña inválida</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>486</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.4:44]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.4:44]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.4:44]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def password = &#39;12345678&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.4:44]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payload = { email: &#39;aprendiz1001@qaxpert.com&#39;, password: &#39;12345678&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>set payload.password = &#39;1234567&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/auth/v1/token&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param grant_type = &#39;password&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payload</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">475</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="4.32">20:09:29.249 request:
+1 &gt; POST https://bnjqjtsxgoenzzjzzwhe.supabase.co/auth/v1/token?grant_type=password
+1 &gt; apikey: sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Authorization: Bearer sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 57
+1 &gt; Host: bnjqjtsxgoenzzjzzwhe.supabase.co
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/25)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;aprendiz1001@qaxpert.com&quot;,&quot;password&quot;:&quot;1234567&quot;}
+
+20:09:29.721 response time in milliseconds: 471
+1 &lt; 400
+1 &lt; Date: Sun, 26 Apr 2026 23:09:29 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 81
+1 &lt; Connection: keep-alive
+1 &lt; CF-Ray: 9f294162d9af3557-EZE
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; Server: cloudflare
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Vary: Origin
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; sb-gateway-version: 1
+1 &lt; sb-project-ref: bnjqjtsxgoenzzjzzwhe
+1 &lt; sb-request-id: 019dcc0e-19ec-779e-88bd-ecafe81b2674
+1 &lt; x-envoy-attempt-count: 1
+1 &lt; x-envoy-upstream-service-time: 93
+1 &lt; x-sb-error-code: invalid_credentials
+1 &lt; set-cookie: __cf_bm=PvLI_wtfuAPxwZ0nAWf_Lysatb4WAz.90ATjbyXuZW8-1777244969.4288146-1.0.1.1-fqW1DZqVmuacvCdHUdyd8SU4obApNSq67wTPe8YmU2SDhQ_kGtbBVLzjrAksVp5y9AkhFW7EPI0MuZAK9i1D1MMo8wn3W8uvSB_WC_YI1ubAgm5iLicn85UcCm_jgXM8; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:29 GMT
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+1 &lt; Set-Cookie: __cf_bm=PvLI_wtfuAPxwZ0nAWf_Lysatb4WAz.90ATjbyXuZW8-1777244969.4288146-1.0.1.1-fqW1DZqVmuacvCdHUdyd8SU4obApNSq67wTPe8YmU2SDhQ_kGtbBVLzjrAksVp5y9AkhFW7EPI0MuZAK9i1D1MMo8wn3W8uvSB_WC_YI1ubAgm5iLicn85UcCm_jgXM8; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:29 GMT
+{&quot;code&quot;:400,&quot;error_code&quot;:&quot;invalid_credentials&quot;,&quot;msg&quot;:&quot;Invalid login credentials&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.error_code == &#39;invalid_credentials&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.msg == &#39;Invalid login credentials&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.5:45]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.5:45]</span>
+                <span class="scenario-name">CP06 - Login con Contraseña vacía</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>479</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.5:45]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.5:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.5:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def password = &#39;12345678&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.5:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payload = { email: &#39;aprendiz1001@qaxpert.com&#39;, password: &#39;12345678&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>set payload.password = &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/auth/v1/token&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param grant_type = &#39;password&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payload</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">471</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="5.32">20:09:29.761 request:
+1 &gt; POST https://bnjqjtsxgoenzzjzzwhe.supabase.co/auth/v1/token?grant_type=password
+1 &gt; apikey: sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Authorization: Bearer sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 50
+1 &gt; Host: bnjqjtsxgoenzzjzzwhe.supabase.co
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/25)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;aprendiz1001@qaxpert.com&quot;,&quot;password&quot;:&quot;&quot;}
+
+20:09:30.227 response time in milliseconds: 465
+1 &lt; 400
+1 &lt; Date: Sun, 26 Apr 2026 23:09:30 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 81
+1 &lt; Connection: keep-alive
+1 &lt; CF-Ray: 9f2941661acec7ff-EZE
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; Server: cloudflare
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Vary: Origin
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; sb-gateway-version: 1
+1 &lt; sb-project-ref: bnjqjtsxgoenzzjzzwhe
+1 &lt; sb-request-id: 019dcc0e-1be3-7410-badf-8cfae3cbb551
+1 &lt; x-envoy-attempt-count: 1
+1 &lt; x-envoy-upstream-service-time: 83
+1 &lt; x-sb-error-code: invalid_credentials
+1 &lt; set-cookie: __cf_bm=Rwtb82Tt_xXqsIqk8gNSHNANtjckQcq9tFZce9R2wrY-1777244969.9359958-1.0.1.1-7Llo_smHW1lwxYZ0OeFhunr2nCGcGYSdBWDd.KGFVed0qB2Tg8CUGKtS4Jb0R0CnnbrzpqbgflHKX6eYA006Z1mEM_DNvSqOF6siTcQlpEneSLheCilFpwFGzE0hC5IT; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:30 GMT
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+1 &lt; Set-Cookie: __cf_bm=Rwtb82Tt_xXqsIqk8gNSHNANtjckQcq9tFZce9R2wrY-1777244969.9359958-1.0.1.1-7Llo_smHW1lwxYZ0OeFhunr2nCGcGYSdBWDd.KGFVed0qB2Tg8CUGKtS4Jb0R0CnnbrzpqbgflHKX6eYA006Z1mEM_DNvSqOF6siTcQlpEneSLheCilFpwFGzE0hC5IT; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:30 GMT
+{&quot;code&quot;:400,&quot;error_code&quot;:&quot;invalid_credentials&quot;,&quot;msg&quot;:&quot;Invalid login credentials&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.error_code == &#39;invalid_credentials&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.msg == &#39;Invalid login credentials&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:47]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:47]</span>
+                <span class="scenario-name">CP07 - Login con campo email ausente</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>287</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:47]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:47]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:47]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def password = &#39;12345678&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:47]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payload = { email: &#39;aprendiz1001@qaxpert.com&#39;, password: &#39;12345678&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.48">
+      <div class="step-ref passed">48</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>remove payload.email</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/auth/v1/token&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.51">
+      <div class="step-ref passed">51</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param grant_type = &#39;password&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payload</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">281</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.53">20:09:30.258 request:
+1 &gt; POST https://bnjqjtsxgoenzzjzzwhe.supabase.co/auth/v1/token?grant_type=password
+1 &gt; apikey: sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Authorization: Bearer sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 23
+1 &gt; Host: bnjqjtsxgoenzzjzzwhe.supabase.co
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/25)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;password&quot;:&quot;12345678&quot;}
+
+20:09:30.535 response time in milliseconds: 275
+1 &lt; 400
+1 &lt; Date: Sun, 26 Apr 2026 23:09:30 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 76
+1 &lt; Connection: keep-alive
+1 &lt; CF-Ray: 9f2941692a8ea12e-EZE
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; Server: cloudflare
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Vary: Origin
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; sb-gateway-version: 1
+1 &lt; sb-project-ref: bnjqjtsxgoenzzjzzwhe
+1 &lt; sb-request-id: 019dcc0e-1dbf-7888-a89c-3393dd158a45
+1 &lt; x-envoy-attempt-count: 1
+1 &lt; x-envoy-upstream-service-time: 0
+1 &lt; x-sb-error-code: validation_failed
+1 &lt; set-cookie: __cf_bm=szWlKNIdN7JGBSvTJ0agx2q7H6EHUpE7eBXm0KAqU6o-1777244970.423102-1.0.1.1-Hn8_UrE4HEk6NV.30IKgMVHzaheuO.9Ujgn.V_yjARVD0nsIwBVXGF6wTBuqSghUrSCd5wu_Tqps6ZuUhKweiwHdrwMm3JeOJn9zVi6I49UFymFPggSDIbQleibM5z0D; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:30 GMT
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+1 &lt; Set-Cookie: __cf_bm=szWlKNIdN7JGBSvTJ0agx2q7H6EHUpE7eBXm0KAqU6o-1777244970.423102-1.0.1.1-Hn8_UrE4HEk6NV.30IKgMVHzaheuO.9Ujgn.V_yjARVD0nsIwBVXGF6wTBuqSghUrSCd5wu_Tqps6ZuUhKweiwHdrwMm3JeOJn9zVi6I49UFymFPggSDIbQleibM5z0D; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:30 GMT
+{&quot;code&quot;:400,&quot;error_code&quot;:&quot;validation_failed&quot;,&quot;msg&quot;:&quot;missing email or phone&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.54">
+      <div class="step-ref passed">54</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.55">
+      <div class="step-ref passed">55</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.error_code == &#39;validation_failed&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.56">
+      <div class="step-ref passed">56</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.msg == &#39;missing email or phone&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:58]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:58]</span>
+                <span class="scenario-name">CP08 - Login con campo contraseña ausente</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>367</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4:58]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4:58]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:58]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def password = &#39;12345678&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:58]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payload = { email: &#39;aprendiz1001@qaxpert.com&#39;, password: &#39;12345678&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.59">
+      <div class="step-ref passed">59</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>remove payload.password</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.61">
+      <div class="step-ref passed">61</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/auth/v1/token&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.62">
+      <div class="step-ref passed">62</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param grant_type = &#39;password&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.63">
+      <div class="step-ref passed">63</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request payload</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.64">
+      <div class="step-ref passed">64</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">361</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.64">20:09:30.564 request:
+1 &gt; POST https://bnjqjtsxgoenzzjzzwhe.supabase.co/auth/v1/token?grant_type=password
+1 &gt; apikey: sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Authorization: Bearer sb_publishable_f98rPx2O8YbjxhH5Sm3u8g_MIFqACVH
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 36
+1 &gt; Host: bnjqjtsxgoenzzjzzwhe.supabase.co
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/25)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;aprendiz1001@qaxpert.com&quot;}
+
+20:09:30.920 response time in milliseconds: 353
+1 &lt; 400
+1 &lt; Date: Sun, 26 Apr 2026 23:09:30 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 81
+1 &lt; Connection: keep-alive
+1 &lt; CF-Ray: 9f29416b0f4fb861-EZE
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; Server: cloudflare
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Vary: Origin
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; sb-gateway-version: 1
+1 &lt; sb-project-ref: bnjqjtsxgoenzzjzzwhe
+1 &lt; sb-request-id: 019dcc0e-1eef-7e27-ad45-38b7b97b1072
+1 &lt; x-envoy-attempt-count: 1
+1 &lt; x-envoy-upstream-service-time: 88
+1 &lt; x-sb-error-code: invalid_credentials
+1 &lt; set-cookie: __cf_bm=jDDpPSiB5Eu_N31pzxnPBAsTq0_RDR3qmuZPBJ1ORZ0-1777244970.7289877-1.0.1.1-UgkD0g2pkXDswGGDIx4ftlba1t8PqVCsbdMES3YspggOI3kSrvB3BHQbcckD2o9pIkOJw56CR0xHj8VIkwHbN16GBGWMsHUe8L03q6eR.yhvxPiHlDzKfj5XjoOFD_sb; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:30 GMT
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+1 &lt; Set-Cookie: __cf_bm=jDDpPSiB5Eu_N31pzxnPBAsTq0_RDR3qmuZPBJ1ORZ0-1777244970.7289877-1.0.1.1-UgkD0g2pkXDswGGDIx4ftlba1t8PqVCsbdMES3YspggOI3kSrvB3BHQbcckD2o9pIkOJw56CR0xHj8VIkwHbN16GBGWMsHUe8L03q6eR.yhvxPiHlDzKfj5XjoOFD_sb; HttpOnly; Secure; Path=/; Domain=supabase.co; Expires=Sun, 26 Apr 2026 23:39:30 GMT
+{&quot;code&quot;:400,&quot;error_code&quot;:&quot;invalid_credentials&quot;,&quot;msg&quot;:&quot;Invalid login credentials&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.65">
+      <div class="step-ref passed">65</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.66">
+      <div class="step-ref passed">66</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.error_code == &#39;invalid_credentials&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.67">
+      <div class="step-ref passed">67</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.msg == &#39;Invalid login credentials&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
