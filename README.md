@@ -15,13 +15,21 @@ Este proyecto usa **Karate Framework** para automatizar pruebas para la API de A
 
 ```
 qax-real-exp-apis-kt/
-├── src/                                     # Carpeta raíz del código y tests
-├── karate-config.js                         # Configuración global del framework Karate
-├── LICENSE                                  # Licencia del repositorio
-├── pom.xml                                  # Archivo de configuración de Maven
-├── README.md                                # Documentación general del proyecto
-└── testCases Aprendiz.md                    # Detalle de los casos de prueba definidos
-└── Auth Aprendiz.postman_collection         # Colección de Postman para pruebas manuales
+├── src/
+│   └── test/
+│       └── java/                      # Lógica y escenarios de prueba
+│           ├── features/
+│           │   └── auth/
+│           │       └── login.feature  # Tus escenarios de login
+│           ├── runners/
+│           │   └── LoginTest.java     # Clase para ejecutar los tests
+│           ├── karate-config.js       # Configuración global (URLs, variables)
+│           └── karate-auth.json       # Credenciales
+│       └── resources/               
+│           └── data/                  # Archivos JSON/CSV con datos de prueba
+├── pom.xml                            # Configuración de dependencias Maven
+├── README.md                          # Documentación del proyecto
+└── testCases_Aprendiz.md              # Documentación de los casos
 ```
 
 ## 🚀 Configuración y Ejecución
@@ -36,7 +44,7 @@ qax-real-exp-apis-kt/
    
 Ejecución completa: 
 ```
-mvn test -Dtest=LoginRunner
+mvn test
 ```
 
 
