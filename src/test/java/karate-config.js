@@ -6,7 +6,9 @@ function fn() {
 
   var config = {
     baseUrl: 'https://bnjqjtsxgoenzzjzzwhe.supabase.co',
-    supabaseKey: auth.supabaseKey
+    supabaseKey: auth.supabaseKey,
+    // Definimos el regex de forma global
+    uuidRegex: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
   };
 
   karate.configure('headers', { 
