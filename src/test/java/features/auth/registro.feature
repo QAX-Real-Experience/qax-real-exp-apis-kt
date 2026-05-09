@@ -50,3 +50,33 @@ Feature: Registro de usuario Aprendiz
     When method post
     Then status 400
     And match response.msg == 'Signup requires a valid password'
+
+
+   Scenario: CP04 - Registro sin email
+
+    Given path '/auth/v1/signup'
+    And param grant_type = 'password'
+
+    # Clonamos el payload y removemos el campo email
+    * def invalidPayload = payload
+    * remove invalidPayload.email
+
+    And request invalidPayload
+    When method post
+    Then status 422
+    And match response.msg == 'Anonymous sign-ins are disabled'
+
+
+   Scenario: CP05 - Registro con email inválido
+
+    Given path '/auth/v1/signup'
+    And param grant_type = 'password'
+
+    # Clonamos el payload y asignamos un email inválido
+    * def invalidPayload = payload
+    * set invalidPayload.email = 'invalid-email-format'
+
+    And request invalidPayload
+    When method post
+    Then status 400
+    And match response.msg == 'Unable to validate email address: invalid format'
