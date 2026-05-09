@@ -97,7 +97,7 @@ para crear una cuenta dentro de la plataforma.
 *   **Given:** la API de registro está operativa en la base_Url
 *   **When:** se envía una petición POST al endpoint de Registro sin enviar email
 *   **Then:** el código de respuesta debe ser 422
-*   **And:** el código interno en el campo Body es 422
+*   **And:** el mensaje de error en la respuesta contiene un texto descriptivo sobre el requerimiento de email
 
 
 #### **Scenario: CP05 - Registro con email inválido**
@@ -115,8 +115,8 @@ para crear una cuenta dentro de la plataforma.
 *   **And:** la respuesta contiene el "length" como motivo
 
 
-#### **Scenario: CP07 - Registro sin campos obligatorios (Nombre, País, WhatsApp)**
+#### **Scenario: CP07 - Registro sin campos optativos (Nombre, País, WhatsApp)**
 *   **Given:** la API de registro está operativa en la base_Url
 *   **When:** se envía una petición POST al endpoint de Registro sin nombre, país ni whatsapp
-*   **Then:** el código de respuesta debe ser 400
-*   **And:** la respuesta debe indicar qué campo obligatorio falta
+*   **Then:** el código de respuesta debe ser 200 OK
+*   **And:** los campos optativos permanecen vacíos

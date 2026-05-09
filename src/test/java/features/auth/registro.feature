@@ -21,7 +21,7 @@ Feature: Registro de usuario Aprendiz
     """
     {
       "access_token": "#string",
-      "expires_in": "#number",
+      "expires_in": "#number? _ % 1 == 0"
     }
     """
      And match response.user contains userSchema
@@ -34,6 +34,7 @@ Feature: Registro de usuario Aprendiz
     And request payload
     When method post
     Then status 422
+    And match response.error_code == 'user_already_exists'
     And match response.msg == 'User already registered'
 
 
@@ -43,7 +44,7 @@ Feature: Registro de usuario Aprendiz
     And param grant_type = 'password'
 
     # Clonamos el payload y removemos el campo password
-    * def invalidPayload = payload
+    * copy invalidPayload = payload
     * remove invalidPayload.password
 
     And request invalidPayload
@@ -58,7 +59,7 @@ Feature: Registro de usuario Aprendiz
     And param grant_type = 'password'
 
     # Clonamos el payload y removemos el campo email
-    * def invalidPayload = payload
+    * copy invalidPayload = payload
     * remove invalidPayload.email
 
     And request invalidPayload
@@ -73,10 +74,50 @@ Feature: Registro de usuario Aprendiz
     And param grant_type = 'password'
 
     # Clonamos el payload y asignamos un email inválido
-    * def invalidPayload = payload
+    * copy invalidPayload = payload
     * set invalidPayload.email = 'invalid-email-format'
 
     And request invalidPayload
     When method post
     Then status 400
+    And match response.error_code == 'validation_failed'
     And match response.msg == 'Unable to validate email address: invalid format'
+
+   Scenario: CP06 - Fortaleza de Contraseña (Límite Inferior)
+
+    Given path '/auth/v1/signup'
+    And param grant_type = 'password'
+
+    # Clonamos el payload y asignamos una contraseña débil (menos de 6 caracteres)
+    * copy invalidPayload = payload
+    * set invalidPayload.password = 'tl123'
+
+    And request invalidPayload
+    When method post
+    Then status 422
+    And match response.error_code == 'weak_password'
+    And match response.msg == 'Password should be at least 6 characters.'
+    And match response.weak_password.reasons == ['length']
+
+
+   Scenario: CP07 - Registro sin campos optativos (Nombre, País, WhatsApp)
+    
+    # Generamos un nuevo set de datos solo para este escenario
+    * def newUserData = call read('classpath:features/auth/helpers/build-payload-user.feature')
+    * def newPayload = newUserData.payload
+
+    # 2. Eliminamos los campos que están sueltos en la raíz
+    * remove newPayload.fullname
+    * remove newPayload.country
+    * remove newPayload.wp
+
+    # 3. Seteamos el objeto data con valores vacíos
+    * set newPayload.data = { "fullname": "", "country": "", "wp": "" }
+
+
+    Given path '/auth/v1/signup'
+    And param grant_type = 'password'
+    And request newPayload
+    When method post
+    Then status 200
+    And match response.user.user_metadata contains { "fullname": "", "country": "", "wp": "" }
