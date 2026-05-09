@@ -25,3 +25,28 @@ Feature: Registro de usuario Aprendiz
     }
     """
      And match response.user contains userSchema
+
+
+  Scenario: CP02 - Registro con email duplicado
+
+    Given path '/auth/v1/signup'
+    And param grant_type = 'password'
+    And request payload
+    When method post
+    Then status 422
+    And match response.msg == 'User already registered'
+
+
+  Scenario: CP03 - Registro sin contraseña
+
+    Given path '/auth/v1/signup'
+    And param grant_type = 'password'
+
+    # Clonamos el payload y removemos el campo password
+    * def invalidPayload = payload
+    * remove invalidPayload.password
+
+    And request invalidPayload
+    When method post
+    Then status 400
+    And match response.msg == 'Signup requires a valid password'
