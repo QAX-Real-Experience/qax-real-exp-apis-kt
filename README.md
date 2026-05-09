@@ -17,19 +17,25 @@ Este proyecto usa **Karate Framework** para automatizar pruebas para la API de A
 qax-real-exp-apis-kt/
 ├── src/
 │   └── test/
-│       └── java/                      # Lógica y escenarios de prueba
+│       └── java/                                             # Lógica y escenarios de prueba
 │           ├── features/
 │           │   └── auth/
-│           │       └── login.feature  # Tus escenarios de login
+│           │       └── login.feature                         # Tus escenarios de login
+│           │       └── registro.feature                      # Tus escenarios de registro
+│           │       └── helpers
+│           │               └── build-payload-user.feature    # Payload para users                             
 │           ├── runners/
-│           │   └── LoginTest.java     # Clase para ejecutar los tests
-│           ├── karate-config.js       # Configuración global (URLs, variables)
-│           └── karate-auth.json       # Credenciales
+│           │   └── KarateRunnerTest.java                     # Clase para ejecutar los tests
+│           ├── utils/
+│           │   └── utils.js                                  # Funciones JavaScript auxiliares
+│           ├── karate-auth.json                              # Credenciales 
+│           └── karate-config.js                              # Configuración global (URLs, variables)
 │       └── resources/               
-│           └── data/                  # Archivos JSON/CSV con datos de prueba
-├── pom.xml                            # Configuración de dependencias Maven
-├── README.md                          # Documentación del proyecto
-└── testCases_Aprendiz.md              # Documentación de los casos
+│           └── data/                                         # Archivos JSON/CSV con datos de prueba
+│                └── user-data                                # Data Driven Testing
+├── pom.xml                                                   # Configuración de dependencias Maven
+├── README.md                                                 # Documentación del proyecto
+└── testCases_Aprendiz.md                                     # Documentación de los casos
 ```
 
 ## 🚀 Configuración y Ejecución
