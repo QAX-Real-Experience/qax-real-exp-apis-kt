@@ -2,7 +2,7 @@ package runners;
 
 import com.intuit.karate.junit5.Karate;
 
-public class LoginTest {
+public class KarateRunnerTest {
 
     @Karate.Test
     Karate testAll() {
